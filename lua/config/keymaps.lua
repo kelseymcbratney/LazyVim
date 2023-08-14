@@ -68,6 +68,10 @@ vim.keymap.set("n", "<leader>re", function()
   require("betterTerm").send(
     require("code_runner.commands").get_filetype_command(),
     1,
-    { clean = false, interrupt = true }
+    { clean = true, interrupt = true }
   )
 end, { desc = "Excute File" })
+
+--K8s keybinds
+vim.api.nvim_set_keymap("n", "<leader>kc", ":K8sKubeConfig<CR>", {})
+vim.api.nvim_set_keymap("n", "<leader>kn", ":K8sNamespaces<CR>", {})

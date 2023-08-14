@@ -3,7 +3,10 @@ return {
   opts = {
     filesystem = {
       filtered_items = {
-        visible = true,
+        visible = false,
+        always_show = {
+          "/home/kdmcbratney/.config/nvim",
+        },
       },
     },
   },
