@@ -70,8 +70,8 @@ vim.keymap.set("n", "<leader>re", function()
     1,
     { clean = true, interrupt = true }
   )
-end, { desc = "Excute File" })
+end, { desc = "Execute File" })
 
---K8s keybinds
-vim.api.nvim_set_keymap("n", "<leader>kc", ":K8sKubeConfig<CR>", {})
-vim.api.nvim_set_keymap("n", "<leader>kn", ":K8sNamespaces<CR>", {})
+--Crtl C to Esc
+
+vim.keymap.set("n", "<C-c>", "<esc>", { desc = "Esc", noremap = true, silent = false })
