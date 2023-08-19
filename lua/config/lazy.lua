@@ -15,6 +15,8 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.linting.eslint" },
     { "CRAG666/code_runner.nvim", config = true },
     { "CRAG666/betterTerm.nvim", config = true },
+    { "alexghergh/nvim-tmux-navigation", config = true },
+    { "ThePrimeagen/harpoon", config = true },
     -- import any extras modules here
     -- { import = "lazyvim.plugins.extras.lang.typescript" },
     -- { import = "lazyvim.plugins.extras.lang.json" },
