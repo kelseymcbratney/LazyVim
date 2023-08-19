@@ -40,13 +40,16 @@ vim.keymap.set("n", "<Leader>ds", function()
   widgets.centered_float(widgets.scopes)
 end)
 
+-- Code Runner Keybinds
 vim.keymap.set("n", "<leader>r", ":RunCode<CR>", { noremap = true, silent = false })
 vim.keymap.set("n", "<leader>rp", ":RunProject<CR>", { noremap = true, silent = false })
 vim.keymap.set("n", "<leader>rc", ":RunClose<CR>", { noremap = true, silent = false })
 vim.keymap.set("n", "<leader>crf", ":CRFiletype<CR>", { noremap = true, silent = false })
 vim.keymap.set("n", "<leader>crp", ":CRProjects<CR>", { noremap = true, silent = false })
 
+-- BetterTerm Keybinds
 local betterTerm = require("betterTerm")
+vim.keymap.set({ "n" }, "<leader>t", function() end, { desc = "Better Term" })
 -- toggle firts term
 vim.keymap.set({ "n", "t" }, "<C-;>", betterTerm.open, { desc = "Open terminal" })
 -- Select term focus
@@ -58,9 +61,7 @@ vim.keymap.set({ "n" }, "<leader>tn", function()
   current = current + 1
 end, { desc = "New terminal" })
 
--- use the best keymap for you
--- change 1 for other terminal id
--- Change "get_filetype_command()" to "get_project_command().command" for running projects
+-- BetterTerm Integration with CodeRunner Keybinds
 vim.keymap.set("n", "<leader>re", function()
   require("betterTerm").send(
     require("code_runner.commands").get_filetype_command(),
@@ -90,3 +91,11 @@ end, { desc = "Harpoon File 3" })
 vim.keymap.set("n", "<leader>hl", function()
   ui.nav_file(4)
 end, { desc = "Harpoon File 4" })
+
+-- Center Control D and U to Center
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { remap = true })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { remap = true })
+
+-- Center Search in Middle
+vim.keymap.set("n", "n", "nzzzv", { remap = true })
+vim.keymap.set("n", "N", "Nzzzv", { remap = true })
