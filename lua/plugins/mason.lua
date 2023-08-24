@@ -11,6 +11,8 @@ return {
       "ruff",
       "black",
       "debugpy",
+      "cpplint",
+      "cpptools",
     },
   },
 }

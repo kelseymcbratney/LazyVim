@@ -99,3 +99,11 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { remap = true })
 -- Center Search in Middle
 vim.keymap.set("n", "n", "nzzzv", { remap = true })
 vim.keymap.set("n", "N", "Nzzzv", { remap = true })
+
+-- Fuzzy Find Hidden Files
+vim.api.nvim_set_keymap(
+  "n",
+  "<Leader><space>",
+  ':lua require"telescope.builtin".find_files({ hidden = true })<CR>',
+  { noremap = true, silent = true }
+)
