@@ -5,7 +5,7 @@ return {
       filtered_items = {
         visible = false,
         always_show = {
-          "/home/kdmcbratney/.config/nvim",
+          "/home/kdmcbratney/.config/",
         },
       },
     },

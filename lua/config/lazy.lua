@@ -13,15 +13,17 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.dap.core" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
     { import = "lazyvim.plugins.extras.linting.eslint" },
+    -- import any extras modules here
+    { import = "lazyvim.plugins.extras.lang.typescript" },
+    { import = "lazyvim.plugins.extras.lang.java" },
+    { import = "lazyvim.plugins.extras.lang.json" },
+    { import = "lazyvim.plugins.extras.coding.copilot" },
+    -- import/override with your plugins
     { "CRAG666/code_runner.nvim", config = true },
     { "CRAG666/betterTerm.nvim", config = true },
     { "alexghergh/nvim-tmux-navigation", config = true },
     { "ThePrimeagen/harpoon", config = true },
-    -- import any extras modules here
-    -- { import = "lazyvim.plugins.extras.lang.typescript" },
-    -- { import = "lazyvim.plugins.extras.lang.json" },
-    -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
-    -- import/override with your plugins
+    { "numToStr/Comment.nvim", config = true },
     { import = "plugins" },
   },
   defaults = {
@@ -33,7 +35,6 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     rtp = {

@@ -13,6 +13,9 @@ return {
       "debugpy",
       "cpplint",
       "cpptools",
+      "clangd",
+      "java-test",
+      "java-debug-adapter",
     },
   },
 }

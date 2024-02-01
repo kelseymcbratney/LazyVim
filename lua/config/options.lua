@@ -57,3 +57,8 @@ end
 
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
+
+opts = function(_, opts)
+  opts.ensure_installed = opts.ensure_installed or {}
+  vim.list_extend(opts.ensure_installed, { "java" })
+end
